@@ -47,7 +47,7 @@ client.on('message', message => {
   }
   else
   {
-    message.channel.send(command + 'is not an acceptable command')
+    message.channel.send(command + ' is not an acceptable command')
   }
 });
 
