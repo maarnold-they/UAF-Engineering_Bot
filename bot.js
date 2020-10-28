@@ -25,6 +25,19 @@ client.on('message', message => {
     member.roles.add(role).catch(console.error);
 	  message.channel.send('done');
 	}
+  //remove class roles
+  if (command === 'leave')
+  {
+    if(!classes.includes(args[0]))
+    {
+      message.channel.send(args[0] + " is not a class.");
+      return;
+    }
+    const role = message.guild.roles.cache.find(role=>role.name===args[0]);
+    const member = message.member;
+    member.roles.remove(role).catch(console.error);
+    message.channel.send('done');
+  }
 });
 
 client.login(token);
