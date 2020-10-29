@@ -41,8 +41,8 @@ client.on('message', message => {
   }
   else if (command === 'help')
   {
-    message.channel.send('!join CLASS_CODE')
-    message.channel.send('!leave CLASS_CODE')
+    message.channel.send('!join CLASS-CODE')
+    message.channel.send('!leave CLASS-CODE')
     message.channel.send('!help')
   }
   else
