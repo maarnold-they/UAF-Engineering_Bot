@@ -41,13 +41,28 @@ client.on('message', message => {
   }
   else if (command === 'help')
   {
-    message.channel.send('!join CLASS-CODE')
-    message.channel.send('!leave CLASS-CODE')
-    message.channel.send('!help')
+    message.channel.send('!join CLASS-CODE');
+    message.channel.send('!leave CLASS-CODE');
+    message.channel.send('!help');
+  }
+  else if (command === 'classes')
+  {
+    if(typeof args[0] !== 'undefined')
+    {
+      function begins(str)
+      {
+        return str.startsWith(args[0]);
+      }
+      message.channel.send(classes.sort().filter(begins));
+    }
+    else
+    {
+      message.channel.send(classes.sort());
+    }
   }
   else
   {
-    message.channel.send(command + ' is not an acceptable command')
+    message.channel.send(command + ' is not an acceptable command');
   }
 });
 
