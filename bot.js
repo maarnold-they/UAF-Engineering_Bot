@@ -19,7 +19,7 @@ client.on('message', message => {
   {
     if (!classes.includes(args[0]))
     {
-      message.channel.send(args[0] + " is not a class.");
+      message.channel.send(args[0] + " is not currently a class channel.");
       return;
     }
     const role = message.guild.roles.cache.find(role=>role.name===args[0]);
