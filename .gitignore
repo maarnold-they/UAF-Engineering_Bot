@@ -351,3 +351,5 @@ MigrationBackup/
 
 #This holds the token
 config.json
+package-lock.json
+*.json
